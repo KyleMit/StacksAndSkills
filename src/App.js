@@ -1,36 +1,23 @@
 import React, { Component } from 'react';
 import './App.css';
-
-const stacks = [
-  {
-    title: "Process",
-    items: [
-        {
-          title: "Agile", 
-          items: [
-            {title: "Philosophy"},
-            {title: "Scrum"},
-          ]
-        },
-        {title: "Business Analysis"},
-        {title: "Documentation Management"},
-    ]
-  },
-  {
-    title: "User Experience",
-    items: [
-        {title: "Usability Testing"},
-        {title: "User Research"},
-    ]
-  }
-]
+import stackData from './StackData';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <h1>Stacks & Skills</h1>
-        {stacks.map((stack, index) => (
+        <Stack stacks={stackData} />
+      </div>
+    );
+  }
+}
+
+class Stack extends Component {
+  render() {
+    return (
+      <>
+        {this.props.stacks.map((stack, index) => (
           <div key={index}>
             
             { (!stack.items.length) ?
@@ -47,7 +34,7 @@ class App extends Component {
             }
           </div>
         ))}
-      </div>
+        </>
     );
   }
 }
