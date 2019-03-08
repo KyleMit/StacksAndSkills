@@ -7,36 +7,53 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Stacks & Skills</h1>
-        <Stack stacks={stackData} />
+        <content className="Stacks">
+          <Stack stacks={stackData}   />
+        </content>
       </div>
     );
   }
 }
+
 
 class Stack extends Component {
   render() {
     return (
       <>
         {this.props.stacks.map((stack, index) => (
-          <div key={index}>
-            
-            { (!stack.items.length) ?
-              <span>{stack.title}</span>
-            :
-              <>
-                <h2>{stack.title}</h2>
-                <ul>
-                  {stack.items.map( (item, index) => (
-                    <li key={index}>{item.title}</li>
-                  ))}
-                </ul>
-              </>
-            }
+          <div key={index} className="Stack">
+            <h2>{stack.title}</h2>
+            <Section items={stack.items} />
           </div>
         ))}
         </>
     );
   }
 }
+
+class Section extends Component {
+  render() {
+    return (
+      <>
+        {this.props.items.map((section, index) => (
+          <ul key={index} className="Section">
+            
+            { (section.items && section.items.length) ?
+              <>
+                <li><h3>{section.title}</h3></li>
+                <ul>
+                  <Section items={section.items} />
+                </ul>
+              </>
+            :
+            <li>{section.title}</li>
+            }
+          </ul>
+        ))}
+        </>
+    );
+  }
+}
+
 
 export default App;
