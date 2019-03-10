@@ -226,6 +226,7 @@ const stacks = [
                     { title: "MVC" },
                     { title: "Web API" },
                     { title: "WebForms" },
+                    { title: "Windows Communication Foundation (WCF)" },
                 ]
             },
             {
@@ -258,6 +259,21 @@ const stacks = [
                 items: [
                     { title: "Tomcat" },
                     { title: "JBoss" },
+                ]
+            },
+            {
+                title: "Service Oriented Architecture (SOA)",
+                items: [
+                    { title: "REST" },
+                    { title: "GraphQL" },
+                    { title: "SOAP" },
+                ]
+            },
+            {
+                title: "Web Sockets",
+                items: [
+                    { title: "SignalR" },
+                    { title: "Socket.io" },
                 ]
             },
             {
@@ -337,10 +353,12 @@ const stacks = [
                 items: [
                     { title: "Wordpress" },
                     { title: "Sharepoint" },
-                    { title: "Static Site Generator",
-                    items: [
-                        { title: "Gatsby" }
-                    ] },
+                    {
+                        title: "Static Site Generator",
+                        items: [
+                            { title: "Gatsby" }
+                        ]
+                    },
                 ]
             },
         ]
@@ -381,6 +399,9 @@ const stacks = [
                         title: "Methodologies",
                         items: [
                             { title: "BEM" },
+                            { title: "JSS / CSS-in-JS" },
+                            { title: "Atomic" },
+                            { title: "OOCSS / SMACSS" },
                             { title: "Outside-In Property Order" },
                         ]
                     },
@@ -422,7 +443,7 @@ const stacks = [
                     },
                 ]
             },
-            
+
         ]
     },
     {
@@ -477,11 +498,17 @@ const stacks = [
             {
                 title: "Patterns & Practices",
                 items: [
-                    { title: "Accessibility (A11y)" },
+                    {
+                        title: "Accessibility (A11y)",
+                        items: [
+                            { title: "Accessible Rich Internet Applications (AIRA)" },
+                            { title: "Web Content Accessibility Guidelines (WCAG)" },
+                        ]
+                    },
                     { title: "Internationalization (i18n)" },
                 ]
             },
-            
+
         ]
     },
     {
@@ -550,7 +577,7 @@ const stacks = [
                     { title: "Flow.js" },
                 ]
             }
-            
+
         ]
     },
     {
@@ -668,7 +695,45 @@ const stacks = [
                     { title: "Process Monitor" },
                 ]
             },
-           
+
+        ]
+    },
+    {
+        title: "Testing",
+        items: [
+            {
+                title: "Unit Testing",
+                items: [
+                    { title: "MSTest" },
+                    { title: "NUnit" },
+                    { title: "Jest" },
+                    { title: "Jasmine" },
+                    { title: "Mocha" },
+                ]
+            },
+            {
+                title: "End-to-End (E2E) Testing",
+                items: [
+                    { title: "Test Cafe" },
+                    { title: "Puppeteer / Headless Chrome" },
+                ]
+            },
+            {
+                title: "Cross Browser Testing",
+                items: [
+                    { title: "BrowserStack" },
+                ]
+            },
+            {
+                title: "Patterns & Practices",
+                items: [
+                    { title: "Assert, Act, Arrange (AAA)" },
+                    { title: "Mocking, Faking, Stubbing"},
+                    { title: "Behavior Driven Development (BDD)"},
+                    { title: "Test Driven Development (TDD)"},
+                ]
+            }
+
         ]
     }
 ]
