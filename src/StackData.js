@@ -145,6 +145,15 @@ const stacks = [
                     { title: "Power BI" },
                     { title: "Crystal Reports" },
                     { title: "Tableau" },
+                    { title: "GIS" },
+                ]
+            },
+            {
+                title: "Data Analysis",
+                items: [
+                    { title: "R" },
+                    { title: "SAS" },
+  
                 ]
             },
             {
@@ -159,6 +168,20 @@ const stacks = [
                             { title: "Facts & Dimensions" },
                         ]
                     },
+                ]
+            },
+            {
+                title: "Data Collection",
+                items: [
+                    { title: "Survey Gizmo" },
+                    { title: "Google Forms" },
+                ]
+            },
+            {
+                title: "Integration Engine",
+                items: [
+                    { title: "Rhapsody" },
+                    { title: "HL7 / VXU" },
                 ]
             },
         ]
@@ -401,6 +424,7 @@ const stacks = [
                             { title: "BEM" },
                             { title: "JSS / CSS-in-JS" },
                             { title: "Atomic" },
+                            { title: "CSS Modules" },
                             { title: "OOCSS / SMACSS" },
                             { title: "Outside-In Property Order" },
                         ]
