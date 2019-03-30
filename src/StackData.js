@@ -91,6 +91,7 @@ const stacks = [
                     { title: "MS SQL Server" },
                     { title: "MySQL" },
                     { title: "PostreSQL" },
+                    { title: "MS Access" },
                 ]
             },
             {
@@ -310,9 +311,7 @@ const stacks = [
                     },
                     {
                         title: "Search Engine Optimization (SEO)",
-                        items: [
-                            { title: "Server-Side Rendering (SSR)" },
-                        ]
+        
                     },
                     {
                         title: "Optimization",
@@ -377,12 +376,28 @@ const stacks = [
                     { title: "Wordpress" },
                     { title: "Sharepoint" },
                     {
-                        title: "Static Site Generator",
+                        title: "Server-Side Rendering (SSR)",
                         items: [
                             { title: "Gatsby" }
-                        ]
+                        ],
+                 
+                        
                     },
                 ]
+            },
+            {
+                title: "Server-Side Rendering (SSR)",
+                items: [
+                    { title: "Next.js (react)" },
+                    { title: "Nuxt.js (Vue)" }
+                ],
+            },
+            {
+                title: "Static Site Generator (SSG)",
+                items: [
+                    { title: "Gatsby" },
+                    { title: "Jekyyl" }
+                ],
             },
         ]
     },
