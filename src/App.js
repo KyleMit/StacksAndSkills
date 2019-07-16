@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import stackData from './StackData';
+import stackData from './StackData.json';
+
+
 
 class App extends Component {
   render() {
