@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Stacks & Skills <span className="text-muted">(v0.0.4)</span> </h1>
+        <h1>Stacks & Skills <span className="text-muted">(v{process.env.REACT_APP_VERSION})</span> </h1>
         <content className="Stacks">
           <Stack stacks={stackData}   />
         </content>
