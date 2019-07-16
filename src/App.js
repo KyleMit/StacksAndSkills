@@ -40,13 +40,13 @@ class Section extends Component {
             
             { (section.items && section.items.length) ?
               <>
-                <li><h3>{section.title}</h3></li>
+                <li><h3><button >{section.title}</button></h3></li>
                 <ul>
                   <Section items={section.items} />
                 </ul>
               </>
             :
-            <li>{section.title}</li>
+            <li><button >{section.title}</button ></li>
             }
           </ul>
         ))}

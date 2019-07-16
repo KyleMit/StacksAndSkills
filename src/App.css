@@ -51,4 +51,28 @@ ul {
 }
 .Section {
     margin-left: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.Section li h3 > button {
+    color: inherit;
+}
+
+.Section li button {
+    text-decoration: none;
+    color: #242424;
+    display: block;
+    padding: 1px 5px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: left;
+    background: transparent;
+    box-shadow: none;
+    font-family: unset;
+    font-size: unset;
+}
+
+.Section li button:hover {
+    border: 1px solid green;
 }
