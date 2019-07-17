@@ -15,6 +15,9 @@
                 "title": {
                     "type": "string" 
                 },
+                "level": {
+                  "type": "number" 
+                },
                 "items":  {
                      "type": "array" ,
                      "items": {

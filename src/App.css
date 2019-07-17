@@ -63,6 +63,7 @@ ul {
     text-decoration: none;
     color: #242424;
     display: block;
+    width: 100%;
     padding: 1px 5px;
     border: 1px solid transparent;
     border-radius: 4px;
@@ -71,8 +72,18 @@ ul {
     box-shadow: none;
     font-family: unset;
     font-size: unset;
+    cursor: pointer;
 }
 
 .Section li button:hover {
     border: 1px solid green;
 }
+
+.Section [data-skill-level='1'] { background: hsl(120, 100%, 95%); }
+.Section [data-skill-level='2'] { background: hsl(120, 100%, 90%); }
+.Section [data-skill-level='3'] { background: hsl(120, 100%, 85%); }
+.Section [data-skill-level='4'] { background: hsl(120, 100%, 80%); }
+.Section [data-skill-level='5'] { background: hsl(120, 100%, 75%); }
+.Section [data-skill-level='6'] { background: hsl(120, 100%, 70%); }
+.Section [data-skill-level='7'] { background: hsl(120, 100%, 65%); }
+.Section [data-skill-level='8'] { background: hsl(120, 100%, 55%); }

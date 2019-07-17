@@ -34,6 +34,7 @@ class Stack extends Component {
 }
 
 class Section extends Component {
+
   render() {
     return (
       <>
@@ -48,11 +49,37 @@ class Section extends Component {
                 </ul>
               </>
             :
-            <li><button >{section.title}</button ></li>
+            <Item title={section.title}></Item>
             }
           </ul>
         ))}
         </>
+    );
+  }
+}
+
+
+class Item extends Component {
+
+  // Define the initial state:
+  state = {
+    skillLevel: 0
+  }
+  
+  handleClick = (e) => {
+    this.setState({
+      skillLevel: this.state.skillLevel + 1
+    })
+  }
+
+  render() {
+    return (
+      <li>
+        <button onClick={this.handleClick}
+                data-skill-level={this.state.skillLevel} >
+            {this.props.title}
+        </button >
+      </li>
     );
   }
 }
