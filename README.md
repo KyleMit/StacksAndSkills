@@ -1,5 +1,7 @@
 # Stacks & Scripts
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/17b9669a-94bc-4422-a191-c132d8009dc6/deploy-status)](https://app.netlify.com/sites/stacksandskills/deploys)
+
 A catalog of various technologies, libraries, frameworks, and platforms
 
 ## Project Setup
