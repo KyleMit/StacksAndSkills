@@ -135,7 +135,7 @@
       },
       {
         "title": "Data Analysis",
-        "items": [{ "title": "R" }, { "title": "SAS" }]
+        "items": [{ "title": "MS Excel" }, { "title": "R" }, { "title": "SAS" }]
       },
       {
         "title": "Warehousing",
@@ -158,6 +158,10 @@
       {
         "title": "Integration Engine",
         "items": [{ "title": "Rhapsody" }, { "title": "HL7 / VXU" }]
+      },
+      {
+        "title": "Low Code Platform",
+        "items": [{ "title": "Salseforce" }]
       }
     ]
   },
@@ -282,7 +286,7 @@
         "items": [
           { "title": "React" },
           { "title": "Angular" },
-          { "title": "View" },
+          { "title": "Vue" },
           { "title": "Ember" }
         ]
       },
