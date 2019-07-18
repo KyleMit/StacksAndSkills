@@ -154,11 +154,11 @@ class Item extends Component {
                 onKeyDown={this.handleKeyDown} 
                 data-skill-level={this.state.skillLevel}
                 data-skill-pref={this.state.preference} >
-            <span class="title">
+            <span className="title">
               {this.props.title}
             </span>
             
-            <span class="preference">
+            <span className="preference">
               {this.state.preference === 1 ? '🡅' : this.state.preference === -1 ? '🡇' : ''}
             </span>
         </button >
