@@ -97,6 +97,28 @@
         ]
       },
       {
+        "title": "Geographic Information System (GIS)",
+        "items": [
+          { "title": "Instant Atlas Server & Desktop" },
+          { "title": "Insights" },
+          { "title": "Google Maps API" },
+          { "title": "Spatial Analysis" },
+          { "title": "Python" },
+          { "title": "Mapbox" },
+          {
+            "title": "ArcGIS",
+            "items": [
+              { "title": "ArcGIS Server" },
+              { "title": "ArcGIS JavaScript API" },
+              { "title": "ArcGIS Desktop" },
+              { "title": "ArcMap/ArcPRO" },
+              { "title": "ArcCatalog" },
+              { "title": "ArcGIS Online" }
+            ]
+          }
+        ]
+      },
+      {
         "title": "Patterns & Practices",
         "items": [
           {
@@ -129,8 +151,7 @@
           { "title": "SSRS" },
           { "title": "Power BI" },
           { "title": "Crystal Reports" },
-          { "title": "Tableau" },
-          { "title": "GIS" }
+          { "title": "Tableau" }
         ]
       },
       {
