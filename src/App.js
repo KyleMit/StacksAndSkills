@@ -192,7 +192,7 @@ class Instructions extends Component {
     return (
       <footer className={"hud " + (this.state.isOpen ? 'active' : '')}
               onClick={this.handleClick}>
-        <h2>Instructions</h2>
+        <h2>Instructions <span className="toggle">{this.state.isOpen ? '⮟' : '⮝'}</span></h2>
 
         <h3>Skill Levels - Option A)</h3>
         <div className="overview">

@@ -122,4 +122,7 @@ footer.hud.active {
     max-height: 500px;
 }
 
-
+footer.hud:hover .toggle {
+    color: #2323ff;
+    text-shadow: 0px 0px 2px blue;
+}
