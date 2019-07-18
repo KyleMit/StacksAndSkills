@@ -60,9 +60,11 @@ ul {
 }
 
 .Section li button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     text-decoration: none;
     color: #242424;
-    display: block;
     width: 100%;
     padding: 1px 5px;
     border: 2px solid transparent;
@@ -76,9 +78,9 @@ ul {
 }
 
 .Section li button:hover, .Section li button:focus {
-    border: 2px solid #1d1da4;
+    border: 2px solid #9898ff;
     outline: none;
-    box-shadow: #1d1da475 0px 0px 2px;
+    box-shadow: #9898ff 0px 0px 2px;
 }
 
 .App [data-skill-level='1'] { background: hsl(120, 95%, 95%); }

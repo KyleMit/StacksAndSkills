@@ -16,6 +16,8 @@ const tiers = [
 
 const MaxSkill = 8;
 const MinSkill = 0;
+const MaxPref = 1;
+const MinPref = -1;
 
 
 class App extends Component {
@@ -88,7 +90,8 @@ class Item extends Component {
 
   // Define the initial state:
   state = {
-    skillLevel: 0
+    skillLevel: 0,
+    preference: 0
   }
   
   handleClick = (e) => {
@@ -107,8 +110,7 @@ class Item extends Component {
   }
 
   handleKeyDown = (e) => {
-    e.preventDefault(); 
-    e.stopPropagation(); 
+
 
     if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
 
@@ -121,6 +123,26 @@ class Item extends Component {
       this.setState({
         skillLevel: newSkill
       })
+
+      e.preventDefault(); 
+      e.stopPropagation(); 
+    }
+    
+    if (e.key === "ArrowUp" || e.key === "ArrowDown") {
+
+      let increment = e.key === 'ArrowUp' ? 1 : -1
+      let curPref = this.state.preference
+      let newPref = curPref + increment;
+  
+      newPref = Clamp(newPref, MinPref, MaxPref)
+  
+      this.setState({
+        preference: newPref
+      })
+
+      e.preventDefault(); 
+      e.stopPropagation(); 
+     
     }
   }
 
@@ -130,8 +152,15 @@ class Item extends Component {
         <button onClick={this.handleClick}
                 onContextMenu={this.handleClick}
                 onKeyDown={this.handleKeyDown} 
-                data-skill-level={this.state.skillLevel} >
-            {this.props.title}
+                data-skill-level={this.state.skillLevel}
+                data-skill-pref={this.state.preference} >
+            <span class="title">
+              {this.props.title}
+            </span>
+            
+            <span class="preference">
+              {this.state.preference === 1 ? '🡅' : this.state.preference === -1 ? '🡇' : ''}
+            </span>
         </button >
       </li>
     );
