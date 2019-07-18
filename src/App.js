@@ -102,21 +102,6 @@ class Item extends Component {
     preference: 0
   }
 
-  handleClick = (e) => {
-    let increment = e.type === 'click' ? 1 : -1
-    let curSkill = this.state.skillLevel
-    let newSkill = curSkill + increment;
-
-    newSkill = Clamp(newSkill, MinSkill, MaxSkill)
-
-    this.setState({
-      skillLevel: newSkill
-    })
-
-    e.preventDefault(); 
-    e.stopPropagation(); 
-  }
-
   handleKeyDown = (e) => {
 
 
@@ -157,9 +142,7 @@ class Item extends Component {
   render() {
     return (
       <li>
-        <button onClick={this.handleClick}
-                onContextMenu={this.handleClick}
-                onKeyDown={this.handleKeyDown} 
+        <button onKeyDown={this.handleKeyDown} 
                 className={"skill-level-" + this.state.skillLevel} >
             <span className="title">
               {this.props.title}
