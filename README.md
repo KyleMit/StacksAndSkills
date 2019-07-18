@@ -47,5 +47,6 @@ npm run build   # builds the app for production
 * [React - Import JSON Data](https://stackoverflow.com/a/45662052/1366033)
 * [React - Update State](https://learn.co/lessons/react-updating-state)
 * [React - Increment State](https://stackoverflow.com/a/39316556/1366033)
+* [React - Distinguish between Left and Right click events](https://stackoverflow.com/q/31110184/1366033)
 * [React - 'this' becomes undefined when called from onClick](https://github.com/facebook/react/issues/5040#issuecomment-362503705)
 * [ES Lint - Anchor is Valid](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md)

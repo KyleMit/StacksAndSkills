@@ -87,15 +87,28 @@ class Item extends Component {
   }
   
   handleClick = (e) => {
+    let increment = e.type === 'click' ? 1 : -1
+    let curSkill = this.state.skillLevel
+    let newSkill = curSkill + increment;
+    const MaxSkill = 8;
+    const MinSkill = 0;
+
+    newSkill = Math.max(newSkill, MinSkill)
+    newSkill = Math.min(newSkill, MaxSkill)
+
     this.setState({
-      skillLevel: this.state.skillLevel + 1
+      skillLevel: newSkill
     })
+
+    e.preventDefault(); // Let's stop this event.
+    e.stopPropagation(); // Really this time.
   }
 
   render() {
     return (
       <li>
         <button onClick={this.handleClick}
+                onContextMenu={this.handleClick}
                 data-skill-level={this.state.skillLevel} >
             {this.props.title}
         </button >
