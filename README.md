@@ -56,5 +56,7 @@ npm run build   # builds the app for production
 * [React - Prevent Default](https://medium.com/@ericclemmons/react-event-preventdefault-78c28c950e46)
 * [React - Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html#inline-if-else-with-conditional-operator)
 * [React - handle the `onKeyPress` event in ReactJS?](https://stackoverflow.com/a/35707795/1366033)
+* [React - conditionally applying class attributes](https://stackoverflow.com/a/30533260/1366033)
 * [ES Lint - Anchor is Valid](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md)
 * [JS - What's the most elegant way to cap a number to a segment?](https://stackoverflow.com/a/11409944/1366033)
+* [CSS - transition height: 0; to height: auto; using CSS?](https://stackoverflow.com/a/8331169/1366033)

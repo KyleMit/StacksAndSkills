@@ -14,6 +14,19 @@ const tiers = [
   { "level": 8, "text": "1 point if you could give a presentation on it" },
 ]
 
+const tiers_alt = [
+  { "level": 1, "text": "1 year" },
+  { "level": 2, "text": "2 years" },
+  { "level": 3, "text": "3 years" },
+  { "level": 4, "text": "4 years" },
+  { "level": 5, "text": "5 years" },
+  { "level": 6, "text": "6 years" },
+  { "level": 7, "text": "7 years" },
+  { "level": 8, "text": "8 years" },
+]
+
+
+
 const MaxSkill = 8;
 const MinSkill = 0;
 const MaxPref = 1;
@@ -27,18 +40,12 @@ class App extends Component {
       <div className="App">
         <h1>Stacks & Skills <span className="text-muted">(v{process.env.REACT_APP_VERSION})</span> </h1>
         
-        <div className="overview">
-          {tiers.map((tier, index) => (
-            <div key={index} className="card"
-                 data-skill-level={tier.level}  >
-              {tier.text}
-            </div>
-          ))}
-        </div>
-        
+       
         <content className="Stacks">
           <Stack stacks={stackData}   />
         </content>
+
+        <Instructions></Instructions>
       </div>
     );
   }
@@ -59,6 +66,7 @@ class Stack extends Component {
     );
   }
 }
+
 
 class Section extends Component {
 
@@ -163,6 +171,51 @@ class Item extends Component {
             </span>
         </button >
       </li>
+    );
+  }
+}
+
+
+class Instructions extends Component {
+
+  state = {
+    isOpen: true,
+  }
+  
+  handleClick = (e) => {
+    this.setState({
+      isOpen: !this.state.isOpen
+    })
+  }
+
+  render() {
+    return (
+      <footer className={"hud " + (this.state.isOpen ? 'active' : '')}
+              onClick={this.handleClick}>
+        <h2>Instructions</h2>
+
+        <h3>Skill Levels - Option A)</h3>
+        <div className="overview">
+          {tiers.map((tier, index) => (
+            <div key={index} className="card"
+                data-skill-level={tier.level}  >
+              {tier.text}
+            </div>
+          ))}
+        </div>
+
+        <h3>Skill Levels - Option B)</h3>
+        <div className="overview">
+          {tiers_alt.map((tier, index) => (
+            <div key={index} className="card"
+                data-skill-level={tier.level}  >
+              {tier.text}
+            </div>
+          ))}
+        </div>
+
+
+      </footer>
     );
   }
 }
