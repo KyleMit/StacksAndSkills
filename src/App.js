@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import stackData from './StackData.json';
+import Clamp from './Utility';
 
 const tiers = [
   { "level": 1, "text": "1 point if you've heard of it" },
@@ -93,8 +94,7 @@ class Item extends Component {
     const MaxSkill = 8;
     const MinSkill = 0;
 
-    newSkill = Math.max(newSkill, MinSkill)
-    newSkill = Math.min(newSkill, MaxSkill)
+    newSkill = Clamp(newSkill, MinSkill, MaxSkill)
 
     this.setState({
       skillLevel: newSkill
