@@ -34,16 +34,16 @@ npm run build   # builds the app for production
 ## TODO
 
 * [x] Display / style skills score (gradient / stars 1-8)
-* [ ] Add ability to edit skills
+* [x] Add ability to edit skills
   * [x] with mouse, clicks
-  * [ ] with focus, arrow keys
+  * [x] with focus, arrow keys
   * [ ] UI w/ explanation
-* [ ] Display skills preference (do more of, do less of of)
-* [ ] Add ability to edit preference
+* [x] Display skills preference (do more of, do less of of)
+* [x] Add ability to edit preference
 * [ ] Add ability to export data
 * [ ] Add ability to import data
 * [ ] Add ability to persist data long term
-* [ ] Differentiate plain categories and super skillsets
+* [ ] Buttons on section headers? vanilla categories vs super skillsets?
 
 ## Resources
 

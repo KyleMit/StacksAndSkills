@@ -214,6 +214,27 @@ class Instructions extends Component {
           ))}
         </div>
 
+        <h3>Keys</h3>
+        <div class="keys flex-row">
+          <div class="commands flex-col">
+            <div className="levels">
+              {tiers.map((tier, index) => (
+                <div key={index} className="card"
+                    data-skill-level={tier.level}  >
+                  {tier.level}
+                </div>
+              ))}
+            </div>
+            <div className="flex-row f-space-between">
+              <div>🡄 <span className="text-muted">(-1)</span></div>
+              <div><span className="text-muted">(+1)</span> 🡆</div>
+            </div>
+          </div>
+          <div className="flex-col m-l-1">
+            <div>🡅 - Do More Of</div>
+            <div>🡇 - Do Less Of</div>
+          </div>
+        </div>
 
       </footer>
     );
