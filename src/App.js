@@ -101,7 +101,7 @@ class Item extends Component {
     skillLevel: 0,
     preference: 0
   }
-  
+
   handleClick = (e) => {
     let increment = e.type === 'click' ? 1 : -1
     let curSkill = this.state.skillLevel
@@ -160,8 +160,7 @@ class Item extends Component {
         <button onClick={this.handleClick}
                 onContextMenu={this.handleClick}
                 onKeyDown={this.handleKeyDown} 
-                data-skill-level={this.state.skillLevel}
-                data-skill-pref={this.state.preference} >
+                className={"skill-level-" + this.state.skillLevel} >
             <span className="title">
               {this.props.title}
             </span>
@@ -197,8 +196,8 @@ class Instructions extends Component {
         <h3>Skill Levels - Option A)</h3>
         <div className="overview">
           {tiers.map((tier, index) => (
-            <div key={index} className="card"
-                data-skill-level={tier.level}  >
+            <div key={index} 
+                 className={"card skill-level-" + tier.level}>
               {tier.text}
             </div>
           ))}
@@ -207,8 +206,8 @@ class Instructions extends Component {
         <h3>Skill Levels - Option B)</h3>
         <div className="overview">
           {tiers_alt.map((tier, index) => (
-            <div key={index} className="card"
-                data-skill-level={tier.level}  >
+            <div key={index} 
+                 className={"card skill-level-" + tier.level} >
               {tier.text}
             </div>
           ))}
@@ -219,8 +218,8 @@ class Instructions extends Component {
           <div class="commands flex-col">
             <div className="levels">
               {tiers.map((tier, index) => (
-                <div key={index} className="card"
-                    data-skill-level={tier.level}  >
+                <div key={index} 
+                className={"card skill-level-" + tier.level}  >
                   {tier.level}
                 </div>
               ))}
