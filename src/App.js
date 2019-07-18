@@ -14,6 +14,10 @@ const tiers = [
   { "level": 8, "text": "1 point if you could give a presentation on it" },
 ]
 
+const MaxSkill = 8;
+const MinSkill = 0;
+
+
 class App extends Component {
 
   render() {
@@ -91,8 +95,6 @@ class Item extends Component {
     let increment = e.type === 'click' ? 1 : -1
     let curSkill = this.state.skillLevel
     let newSkill = curSkill + increment;
-    const MaxSkill = 8;
-    const MinSkill = 0;
 
     newSkill = Clamp(newSkill, MinSkill, MaxSkill)
 
@@ -100,8 +102,26 @@ class Item extends Component {
       skillLevel: newSkill
     })
 
-    e.preventDefault(); // Let's stop this event.
-    e.stopPropagation(); // Really this time.
+    e.preventDefault(); 
+    e.stopPropagation(); 
+  }
+
+  handleKeyDown = (e) => {
+    e.preventDefault(); 
+    e.stopPropagation(); 
+
+    if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+
+      let increment = e.key === 'ArrowRight' ? 1 : -1
+      let curSkill = this.state.skillLevel
+      let newSkill = curSkill + increment;
+  
+      newSkill = Clamp(newSkill, MinSkill, MaxSkill)
+  
+      this.setState({
+        skillLevel: newSkill
+      })
+    }
   }
 
   render() {
@@ -109,6 +129,7 @@ class Item extends Component {
       <li>
         <button onClick={this.handleClick}
                 onContextMenu={this.handleClick}
+                onKeyDown={this.handleKeyDown} 
                 data-skill-level={this.state.skillLevel} >
             {this.props.title}
         </button >
