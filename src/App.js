@@ -2,13 +2,33 @@ import React, { Component } from 'react';
 import './App.css';
 import stackData from './StackData.json';
 
-
+const tiers = [
+  { "level": 1, "text": "1 point if you've heard of it" },
+  { "level": 2, "text": "1 point if you can describe it" },
+  { "level": 3, "text": "1 point if you've ever used it (hello world counts)" },
+  { "level": 4, "text": "1 point if you've used it in the last 6 months" },
+  { "level": 5, "text": "1 point if you've deployed it to production" },
+  { "level": 6, "text": "1 point if you've worked on it for > 6 months" },
+  { "level": 7, "text": "1 point if you've worked on it for > 2 years" },
+  { "level": 8, "text": "1 point if you could give a presentation on it" },
+]
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">
         <h1>Stacks & Skills <span className="text-muted">(v{process.env.REACT_APP_VERSION})</span> </h1>
+        
+        <div className="overview">
+          {tiers.map((tier, index) => (
+            <div key={index} className="card"
+                 data-skill-level={tier.level}  >
+              {tier.text}
+            </div>
+          ))}
+        </div>
+        
         <content className="Stacks">
           <Stack stacks={stackData}   />
         </content>
