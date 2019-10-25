@@ -44,6 +44,7 @@ npm run build   # builds the app for production
 * [ ] Add ability to import data
 * [ ] Add ability to persist data long term
 * [ ] Buttons on section headers? vanilla categories vs super skillsets?
+* [ ] Build up training resources for each item
 
 ## Resources
 
